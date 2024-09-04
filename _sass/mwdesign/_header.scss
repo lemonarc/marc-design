@@ -1,0 +1,104 @@
+.site-header {
+	background: #fff;
+    border-top: 0;
+    border-bottom: 0;
+	position: fixed;
+	width: 100vw;
+    z-index: 1;
+
+	a.page-link {
+		border-radius: 25px;
+		padding: 6px 12px;
+		color: #000;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+		text-decoration: none;
+		}
+		&.print-link:hover {
+			background-color: #7DAE13;
+		}
+		&.web-link:hover {
+			background-color: #4D9AFF;
+		}
+		&.uxui-link:hover {
+			background-color: #FBCB00;
+		}
+		&.brand-link:hover {
+			background-color: #E9ADFF;
+		}
+	}
+
+	.site-title {
+		color: #000;
+		display: flex;
+		font-weight: 400;
+
+		svg {
+			fill: #000;
+			width: 36px;
+			height: auto;
+			margin: 9px 10px 9px 0;
+		}
+	}
+}
+
+.site-nav {
+
+	.menu-icon,
+	.close-icon {
+		display: none;
+	}
+
+	@include media-query($on-600) {
+		width: 54px;
+		height: 54px;
+	    position: absolute;
+		top: 0;
+	    right: 0;
+	    border: none;
+	    text-align: right;
+
+		label[for="nav-trigger"]  {
+			width: 54px;
+			height: 54px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.menu-icon {
+			display: block;
+			float: right;
+			width: 36px;
+			height: 26px;
+			line-height: 0;
+			padding-top: 10px;
+			text-align: center;
+			
+			svg {
+				fill: #000;
+			}
+		}
+
+		.trigger {
+			box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.3);
+			width: 200px;
+			position: absolute;
+			right: 0;
+			top: 54px;
+			background: white;
+			height: calc(100vh - 54px);
+			transition: background-color 0.3s ease;
+
+			a.page-link {
+				border-radius: 999px;
+				display: inline-block;
+				font-size: 28px;
+				margin-right: 30px;
+				padding: 6px 20px;
+				transition: background-color 0.3s ease;
+				}
+		}
+	}
+}

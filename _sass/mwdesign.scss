@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$on-1200:           1200px;
+$on-1100:           1100px;
+$on-1040:           1040px;
+$on-1000:           1000px;
+$on-900:            900px;
+$on-800:            800px;
+$on-700:            700px;
+$on-600:            600px;
+$on-500:            500px;
+$on-400:            400px;
+$on-300:            300px;
+$on-200:            200px;
+$on-100:            100px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "mwdesign/base",
+  "mwdesign/header",
+  "mwdesign/footer",
+  "mwdesign/layout"
+;
